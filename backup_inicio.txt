@@ -1,0 +1,120 @@
+main
+
+import 'package:flutter/material.dart';
+import 'package:exemplo32/paginaDeEscolha.dart';
+import 'package:exemplo32/imc.dart';
+import 'package:exemplo32/calculadora.dart';
+
+class MeuApp extends StatefulWidget {
+  const MeuApp({Key? key}) : super(key: key);
+
+  @override
+  _MeuAppState createState() => _MeuAppState();
+}
+
+class _MeuAppState extends State<MeuApp> {
+//local para colocar as variaveis
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (_) => const paginaDeEscolha(),
+        '/imc': (_) => const imc(),
+        '/calculadora': (_) => const calculadora(),
+      },
+    );
+  }
+}
+
+
+
+###########3
+
+
+calculadora
+
+import 'package:flutter/material.dart';
+
+class calculadora extends StatefulWidget {
+  const calculadora({Key? key}) : super(key: key);
+
+  @override
+  _calculadoraState createState() => _calculadoraState();
+}
+
+class _calculadoraState extends State<calculadora> {
+//local para definir as variaveis
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
+
+###############
+
+
+imc
+
+
+import 'package:flutter/material.dart';
+
+class imc extends StatefulWidget {
+  const imc({Key? key}) : super(key: key);
+
+  @override
+  _imcState createState() => _imcState();
+}
+
+class _imcState extends State<imc> {
+  //local para variaveis
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
+            children: [],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+########################
+
+
+paginaDeEscolha
+
+import 'package:flutter/material.dart';
+
+class paginaDeEscolha extends StatefulWidget {
+  const paginaDeEscolha({Key? key}) : super(key: key);
+
+  @override
+  _paginaDeEscolhaState createState() => _paginaDeEscolhaState();
+}
+
+class _paginaDeEscolhaState extends State<paginaDeEscolha> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: SafeArea(
+            child: Column(
+          children: [
+            GestureDetector(),
+            GestureDetector(),
+          ],
+        )),
+      ),
+    );
+  }
+}
